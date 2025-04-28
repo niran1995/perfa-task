@@ -1,0 +1,48 @@
+//First Question -------------------------
+
+1. How would you store customer orders in a simple database?
+For storing customer orders in a simple database, I would use a relational database with the following tables:
+
+a. Customers Table
+This table would store customer details.
+customer_id (Primary Key), first_name, last_name, email, phone_number, shipping_address, billing_address, created_at (timestamp)
+
+b. Products Table
+This table would store product details.
+product_id (Primary Key), product_name, product_description, price, stock_quantity, category_id (Foreign Key - references product category)
+
+c. Orders Table
+This table stores the actual orders placed by customers.
+order_id (Primary Key), customer_id (Foreign Key - references Customers table), order_date (timestamp), shipping_address, total_amount, order_status (e.g., Pending, Shipped, Delivered), payment_status (e.g., Paid, Pending)
+
+d. Order Items Table
+This table tracks individual products within an order.
+order_item_id (Primary Key), order_id (Foreign Key - references Orders table), product_id (Foreign Key - references Products table), quantity, unit_price, subtotal (calculated as quantity * unit_price)
+
+e. Payment Table
+This table stores payment details for orders.
+payment_id (Primary Key), order_id (Foreign Key - references Orders table), payment_method (e.g., Credit Card, PayPal), payment_date (timestamp), payment_status (e.g., Completed, Failed)
+
+Relationships:
+One-to-many between Customers and Orders (one customer can have many orders).
+One-to-many between Orders and Order Items (one order can contain many items).
+Many-to-one between Order Items and Products (many items can refer to one product).
+One-to-one between Orders and Payments (one order has one payment).
+
+This schema allows for flexibility in handling customer information, products, orders, and payments. It’s a simple yet scalable structure.
+
+//Second Question -------------------------
+
+2. What 3 features are important for an online store to work smoothly?
+For an online store to work smoothly, the following three features are essential:
+
+a. User-Friendly Interface & Navigation
+A clean, intuitive, and responsive design is key to enhancing the customer experience. Visitors should be able to easily browse products, filter them by category, price range, or other attributes, and quickly find what they are looking for. A well-designed layout that adapts across devices (mobile, tablet, desktop) is essential for a smooth user experience.
+
+b. Secure Payment Integration
+The online store must offer multiple, secure payment methods (credit/debit cards, PayPal, etc.) to cater to various customer preferences. Security features such as SSL encryption and compliance with standards like PCI-DSS should be implemented to ensure safe transactions and protect customers' sensitive data.
+
+c. Order Management & Tracking
+Efficient order processing and real-time tracking are critical. The store should send automated confirmation emails, update the order status (e.g., pending, shipped, delivered), and allow customers to track their orders easily. This helps keep customers informed and improves satisfaction by reducing anxiety about their purchases.
+
+By ensuring these features, an online store can provide a smooth, secure, and satisfying shopping experience for customers, leading to higher conversion rates and repeat business.

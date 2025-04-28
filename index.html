@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fifty Shades by UK Blinds</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+      rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- Top Section (Header + Menu) -->
+<header>
+  <div class="logo">UK Blinds</div>
+  
+  <nav>
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+  </nav>
+</header>
+
+  <!-- Main Banner (Hero Section) -->
+  <section class="hero">
+    <h1>Fifty Shades by UK Blinds.</h1>
+    <p>The fifty shades you never saw coming.</p>
+    <a href="#" class="btn">Pre-order Now</a>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+  <div class="feature">
+    <i class="fas fa-palette feature-icon"></i>
+    <h3>Stylish Design</h3>
+    <p>Modern colours and finishes for any home.</p>
+  </div>
+  <div class="feature">
+    <i class="fas fa-tools feature-icon"></i>
+    <h3>Easy to Install</h3>
+    <p>Simple setup with full guidance provided.</p>
+  </div>
+  <div class="feature">
+    <i class="fas fa-sun feature-icon"></i>
+    <h3>Blocks Heat</h3>
+    <p>Stay cool and comfortable all year round.</p>
+  </div>
+  </section>
+
+
+ <!-- Image Gallery -->
+  <section class="gallery">
+    <h2 class="gallery-heading">Discover the Beauty</h2>
+    <h3 class="gallery-subheading">Explore the "Fifty Shades" Collection</h3>
+    <p class="gallery-description">
+    A glimpse into our stunning made-to-measure blinds, crafted to transform any interior with elegance and style.
+    </p>
+  
+  <div class="gallery-images">
+    <img src="images/image1.jpg" alt="Blind Image 1" class="gallery-item">
+    <img src="images/image2.jpg" alt="Blind Image 2" class="gallery-item">
+    <img src="images/image3.jpg" alt="Blind Image 3" class="gallery-item">
+    <img src="images/image4.jpg" alt="Blind Image 4" class="gallery-item">
+  </div>
+
+  <!-- Lightbox popup -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+  </section>
+
+
+  
+  <!-- Products -->
+  <section class="products">
+    <h2 class="products-heading">Our Featured Products</h2>
+    <h3 class="products-subheading">Explore Our Wide Range of High-Quality Blinds</h3>
+    <p class="products-description">
+      From modern motorized options to classic roller and day & night blinds, each product is crafted with precision to provide the perfect balance of style and comfort.
+    </p>
+    <div class="product-list">
+      <div class="product-item">
+        <img src="images/product1.jpg" alt="Day & Night Blind">
+        <h3>Day & Night Blind</h3>
+        <p class="description">A versatile blind offering both privacy and light control with a modern design.</p>
+        <p class="price">£120.00</p>
+        <button onclick="addToCart(0)">Add to Cart</button>
+      </div>
+  
+      <div class="product-item">
+        <img src="images/product2.jpg" alt="Roller Blind">
+        <h3>Roller Blind</h3>
+        <p class="description">Sleek, simple, and perfect for any room, providing a clean and minimalistic look.</p>
+        <p class="price">£100.00</p>
+        <button onclick="addToCart(1)">Add to Cart</button>
+      </div>
+  
+      <div class="product-item">
+        <img src="images/product3.png" alt="Motorized Blind">
+        <h3>Motorized Blind</h3>
+        <p class="description">Convenient, smart, and easy-to-use motorized blinds for ultimate comfort.</p>
+        <p class="price">£250.00</p>
+        <button onclick="addToCart(2)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Cart -->
+  <section class="cart">
+    <h2 class="cart-heading">Your Cart</h2>
+    <div id="cart-items"></div>
+    <h3 id="total">Total: £0</h3>
+  </section>
+  
+
+  <!-- Contact Form -->
+  <section class="contact">
+    <h2 class="contact-heading">Get in Touch with Us</h2>
+    <h3 class="contact-subheading">We're Here to Help You!</h3>
+    <p class="contact-description">Our team is always happy to assist you and provide the information you need. Simply fill out the form, and we'll get back to you as soon as possible!</p>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>UK Blinds © 2025</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-square"></i></a>
+      <a href="#"><i class="fab fa-twitter-square"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
